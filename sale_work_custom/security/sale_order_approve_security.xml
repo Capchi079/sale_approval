@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="sale_order_category" model="ir.module.category">
+        <field name="name">Sale Oder Approvals</field>
+        <field name="description">Help To Manage sale order Data</field>
+    </record>
+
+    <record id="group_sale_second_approval" model="res.groups">
+        <field name="name">Second Approval</field>
+        <field name="category_id" ref="sale_work_custom.sale_order_category"/>
+    </record>
+
+</odoo>
