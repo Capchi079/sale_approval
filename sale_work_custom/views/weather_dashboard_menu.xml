@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="weather_menu" name="Weather Dashboard App" sequence="10"/>
+
+    <menuitem id="weather_dashboard_menu" name="Weather Dashboard"
+              parent="weather_menu" action="action_weather_dashboard" sequence="15"/>
+
+</odoo>

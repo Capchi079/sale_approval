@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Form View for deep.seek Model -->
+        <record id="deepseek_form_view" model="ir.ui.view">
+            <field name="name">deepseek.ai.form</field>
+            <field name="model">deep.seek</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="chat"/>
+                            </group>
+                            <group>
+                                <field name="ans"/>
+                            </group>
+                            <button name="deepseek_answer" type="object" string="Fetch Answer" class="oe_highlight"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for deep.seek Model -->
+        <record id="deepseek_tree_view" model="ir.ui.view">
+            <field name="name">deepseek.ai.tree</field>
+            <field name="model">deep.seek</field>
+            <field name="arch" type="xml">
+                <tree string="DeepSeek Records">
+                    <field name="name"/>
+                    <field name="chat"/>
+                    <field name="ans"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for DeepSeek Model -->
+        <record id="action_deepseek_app" model="ir.actions.act_window">
+            <field name="name">DeepSeek App</field>
+            <field name="res_model">deep.seek</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="deepseek_tree_view"/>
+        </record>
+
+        <!-- Menu Item for DeepSeek App -->
+        <menuitem id="deepseek_view_menu" name="DeepSeek"
+                  parent="weather_app_main_menu"
+                  action="action_deepseek_app"/>
+    </data>
+</odoo>

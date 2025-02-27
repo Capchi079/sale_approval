@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Create the main menu -->
+    <menuitem id="weather_app_main_menu" name="Weather App" sequence="10"/>
+
+    <!-- Create a submenu for the model -->
+
+
+    <!-- Define the action -->
+    <record id="action_weather_app" model="ir.actions.act_window">
+        <field name="name">Weather App</field>
+        <field name="res_model">weather.app</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Click "Create" to add a new weather record.
+            </p>
+        </field>
+    </record>
+     <menuitem id="weather_app_menu" name="Weather Records"
+              parent="weather_app_main_menu"
+              action="action_weather_app"/>
+
+<!--     <record id="action_deepseek_app" model="ir.actions.act_window">-->
+<!--        <field name="name">deepseek App</field>-->
+<!--        <field name="res_model">deep.seek</field>-->
+<!--        <field name="view_mode">form,tree</field>-->
+<!--        <field name="help" type="html">-->
+<!--            <p class="o_view_nocontent_smiling_face">-->
+<!--                Click "Create" to add a new weather record.-->
+<!--            </p>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--    <menuitem id="deepseek_view_menu" name="DeepSeek Main"-->
+<!--              parent="weather_app_main_menu"/>-->
+<!--    <menuitem id="deepseek_view_sub" name="DeepSeek"-->
+<!--              parent="deepseek_view_menu" action="action_deepseek_app"/>-->
+</odoo>

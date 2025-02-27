@@ -1,3 +1,5 @@
+import requests
+
 from odoo import api, fields, models
 from odoo.exceptions import UserError
 
@@ -29,6 +31,7 @@ class SaleOrderInherit(models.Model):
         vals['state'] = 'approval_one'
         return super(SaleOrderInherit, self).create(vals)
 
+
     def action_custom_confirm(self):
         """ Custom Confirm Button - Moves from approval_two to sale """
         for record in self:
@@ -36,5 +39,6 @@ class SaleOrderInherit(models.Model):
                 record.state = 'sale'
             else:
                 raise UserError("You Need Approval From The CEO.")
+
 
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="cmr_customizations.LogisticDashboard">
+        <div>
+            <center>
+                <h1 style="margin:20px;">Dashboard</h1>
+            </center>
+            <div class="padded-boxes">
+                <section>
+                    <center><h3 class="heading">BASEMENT LR'S</h3>
+                    <div class="padded">
+                        <b><span id="total_log_count"/></b>
+                    </div>
+                    </center>
+                </section>
+                <section>
+                    <center><h3 class="heading">RECEIVED LR'S</h3>
+                    <div class="padded">
+                        <b><span id="total_delivery_count"/></b>
+                    </div>
+                    </center>
+                </section>
+                <section>
+                    <center>
+                    <h3 class="heading">CLOSED PARCELS</h3>
+                    <div class="padded">
+                        <b><span id="total_open_parcel"/></b>
+                    </div>
+                    </center>
+                </section>
+                <section>
+                    <center>
+                    <h3 class="heading">TRANSFERRED PARCELS</h3>
+                    <div class="padded">
+                        <b><span id="total_transferred_bales"/></b>
+                    </div>
+                    </center>
+                </section>
+                <section>
+                    <center>
+                    <h3 class="heading">UPCOMING LR'S</h3>
+                    <div class="padded">
+                        <b><span id="total_upcoming_lr_count"/></b>
+                    </div>
+                    </center>
+                </section>
+                <section>
+                    <center>
+                    <h3 class="heading">SHORTAGE LR'S</h3>
+                    <div class="padded">
+                        <b><span id="total_shortage_count"/></b>
+                    </div>
+                    </center>
+                </section>
+            </div>
+        </div>
+    </t>
+</templates>

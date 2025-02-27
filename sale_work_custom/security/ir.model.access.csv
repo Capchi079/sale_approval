@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_weather_app,weather.app,model_weather_app,,1,1,1,1
+access_deepseek_app,deep.seek,model_deep_seek,,1,1,1,1

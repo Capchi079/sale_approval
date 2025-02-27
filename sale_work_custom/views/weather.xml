@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_weather_app_form" model="ir.ui.view">
+        <field name="name">weather.app.form</field>
+        <field name="model">weather.app</field>
+        <field name="arch" type="xml">
+            <form string="Weather App">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="user"/>
+                            <field name="city"/>
+                        </group>
+                        <group>
+                            <field name="zip_pin"/>
+                            <field name="weather" readonly="1"/>
+                        </group>
+                        <button name="get_weather" type="object" string="Fetch Weather" class="oe_highlight"/>
+                    </group>
+                    <!--                    <footer>-->
+                    <!--                       -->
+                    <!--                    </footer>-->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_weather_app_tree" model="ir.ui.view">
+        <field name="name">weather.app.tree</field>
+        <field name="model">weather.app</field>
+        <field name="arch" type="xml">
+            <tree string="Weather App">
+                <field name="user"/>
+                <field name="city"/>
+                <field name="weather"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
